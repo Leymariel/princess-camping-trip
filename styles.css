@@ -417,71 +417,14 @@ footer .small {
     margin-top: 0.5rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .hero {
-        height: 300px;
-    }
-
-    .hero-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .info-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .two-column {
-        grid-template-columns: 1fr;
-    }
-
-    .section {
-        padding: 2rem 1.5rem;
-    }
-
-    .section h2 {
-        font-size: 1.5rem;
-    }
-
-    .checklist {
-        grid-template-columns: 1fr;
-    }
-
-    .sites-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .trail-meta {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 480px) {
-    .activities-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .amenities-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Campsite Type Cards */
 .campsite-type-card {
-    background: var(--bg);
+    background: var(--white);
     border-radius: 12px;
     overflow: hidden;
     margin: 2rem 0;
     border: 2px solid var(--border);
+    box-shadow: 0 2px 8px var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -515,7 +458,7 @@ footer .small {
 
 .campsite-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 350px 1fr;
     gap: 2rem;
     padding: 2rem;
 }
@@ -524,7 +467,6 @@ footer .small {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px var(--shadow);
-    height: 100%;
 }
 
 .campsite-image img {
@@ -532,8 +474,7 @@ footer .small {
     height: 100%;
     object-fit: cover;
     display: block;
-    background: var(--bg);
-    min-height: 200px;
+    min-height: 250px;
 }
 
 .campsite-details h4 {
@@ -654,7 +595,7 @@ footer .small {
     }
 }
 
-/* Responsive Updates for Campsite Cards */
+/* Responsive Design */
 @media (max-width: 968px) {
     .campsite-content {
         grid-template-columns: 1fr;
@@ -665,19 +606,69 @@ footer .small {
         gap: 1rem;
         text-align: center;
     }
+}
 
-    .campsite-image {
-        height: 250px;
-        width: 100%;
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
     }
 
-    .price-tag {
-        font-size: 1.1rem;
-        padding: 0.6rem 1.2rem;
+    .hero {
+        height: 300px;
     }
 
-    .campsite-specs {
-        justify-content: center;
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    .card p {
+        font-size: 1.3rem;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 2rem 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .checklist {
+        grid-template-columns: 1fr;
+    }
+
+    .sites-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .trail-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .campsite-content {
+        padding: 1.5rem;
     }
 
     .pricing-grid {
@@ -685,50 +676,76 @@ footer .small {
     }
 }
 
-@media (max-width: 768px) {
-    .campsite-type-card {
-        margin: 1.5rem -1rem;
-    }
-
-    .campsite-content {
-        padding: 1.5rem;
-        gap: 1.5rem;
-    }
-
-    .campsite-image {
-        height: 200px;
-    }
-
-    .amenity-list li {
-        font-size: 0.95rem;
-    }
-
-    .spec {
-        font-size: 0.85rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
 @media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .hero {
+        height: 250px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .section {
+        padding: 1.5rem 1rem;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .campsite-header h3 {
         font-size: 1.2rem;
     }
 
     .price-tag {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        padding: 0.6rem 1.2rem;
     }
 
     .campsite-content {
         padding: 1rem;
+        gap: 1.5rem;
     }
 
-    .campsite-image {
-        height: 180px;
+    .campsite-image img {
+        min-height: 200px;
     }
 
     .campsite-description {
         font-size: 0.95rem;
+    }
+
+    .amenity-list li {
+        font-size: 0.9rem;
+    }
+
+    .spec {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .pricing-option {
